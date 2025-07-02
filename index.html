@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Type Writer</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div id="get-started">
-        <h1>welcome to typing world! Click on ready to get started..</h1>
-        <button class="ready">ready</button>
-    </div>
-    <div class="container-outer">
-        <div class="timer">00:30</div>
-        <div class="container">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis minima veritatis hic consequatur perferendis quos ratione cupiditate mollitia. Rem iusto dicta fuga beatae accusamus earum esse qui illum vel reprehenderit.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Typing Text</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dynamic Typing Test</h1>
+      <div id="setup">
+        <label for="time-select">Choose Time Limit:</label>
+        <select id="time-limit">
+          <option value="60">1 Minute</option>
+          <option value="180">3 Minutes</option>
+          <option value="300">5 Minutes</option>
+        </select>
+        <button id="start-btn">Get Started</button>
+      </div>
+      <div id="game" style="display: none">
+        <div id="text-display">
+          <textarea
+            id="input-area"
+            placeholder="Start typing here"
+            rows="4"
+            disabled
+          ></textarea>
+          <div id="stats">
+            <span id="timer">Time: 0:00</span>
+            <span id="cps">CPS: 0</span>
+            <span id="wpm">WPM: 0</span>
+            <span id="score">Score: 0</span>
+          </div>
         </div>
+        
+      </div>
     </div>
-    <script src="./script.js"></script>
-</body>
+  </body>
 </html>
