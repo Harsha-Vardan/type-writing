@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Typing Text</title>
+    <title>Dynamic Typing Test</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
       <h1>Dynamic Typing Test</h1>
       <div id="setup">
         <label for="time-select">Choose Time Limit:</label>
-        <select id="time-limit">
+        <select id="time-select">
           <option value="60">1 Minute</option>
           <option value="180">3 Minutes</option>
           <option value="300">5 Minutes</option>
@@ -19,22 +19,28 @@
         <button id="start-btn">Get Started</button>
       </div>
       <div id="game" style="display: none">
-        <div id="text-display">
-          <textarea
-            id="input-area"
-            placeholder="Start typing here"
-            rows="4"
-            disabled
-          ></textarea>
-          <div id="stats">
-            <span id="timer">Time: 0:00</span>
-            <span id="cps">CPS: 0</span>
-            <span id="wpm">WPM: 0</span>
-            <span id="score">Score: 0</span>
-          </div>
+        <div id="text-display"></div>
+        <textarea
+          id="input-area"
+          placeholder="Start typing here..."
+          rows="4"
+          disabled
+        ></textarea>
+        <div class="stats">
+          <span id="timer">Time: 0:00</span>
+          <span id="cps">CPS: 0</span>
+          <span id="wpm">WPM: 0</span>
+          <span id="score">Score: 0</span>
+          <span id="high-score">High Score: 0</span>
         </div>
-        
+      </div>
+      <div id="result" style="display: none">
+        <div id="new-high-score-message" style="display: none"></div>
+        <h2>Performance Score</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn">Restart</button>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
